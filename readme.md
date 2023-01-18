@@ -13,6 +13,9 @@
 * yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
 * yarn add uuid
 * yarn add @types/uuid -D
+* yarn add multer 
+* yarn add @types/multer -D
+* yarn add csv-parse
 
 
 ## Instalar VS Code ESLint extension
