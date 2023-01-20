@@ -16,6 +16,8 @@
 * yarn add multer 
 * yarn add @types/multer -D
 * yarn add csv-parse
+* yarn add swagger-ui-express
+* yarn add @types/swagger-ui-express -D
 
 
 ## Instalar VS Code ESLint extension

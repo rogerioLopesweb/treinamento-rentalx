@@ -2,11 +2,13 @@ import { request, response, Router } from "express";
 import multer from "multer"; 
 
 
-import {createCategoryController } from '../modules/cars/useCases/createCategory/index';
+import { createCategoryController } from '../modules/cars/useCases/createCategory/index';
 import { listCategoriesController } from '../modules/cars/useCases/listCategories/index';
 import { importCategoryController } from '../modules/cars/useCases/importCategory/index';
+
 const categoriesRoutes =  Router();
 
+//Configurando a pasta que será realizado o uploado do arquivo
 const upload = multer({
     dest: ".tmp",
 });
