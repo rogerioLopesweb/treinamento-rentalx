@@ -10,7 +10,7 @@ const categoriesRoutes =  Router();
 
 //Configurando a pasta que será realizado o uploado do arquivo
 const upload = multer({
-    dest: ".tmp",
+    dest: "./tmp",
 });
 
 categoriesRoutes.post("/", (request, response) => {

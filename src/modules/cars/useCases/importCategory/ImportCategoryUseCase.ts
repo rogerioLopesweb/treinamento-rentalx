@@ -27,13 +27,11 @@ class ImportCategoryUseCase {
                     description
                 });
             }).on("end", () => {
+                fs.promises.unlink(file.path); // remove o arquivo depois que terma a leitura
                 resolve(categories);
             }).on("error", (err) => {
                 reject(err);
             })
-
-       
-
         });
     }
 
