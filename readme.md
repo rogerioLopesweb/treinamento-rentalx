@@ -23,9 +23,22 @@
 ## Instalar VS Code ESLint extension
 * https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 
-## Docker  
+## Docker Usando Dockerfile
 
 
 * Comando que cria a imagem com base no arquivo dockerfile docker build -t  rentalx .
 * Mapeia a porta e gera o Container  e executa docker run  -p 3333:3333 rentalx
+* docker ps (lista todos container ativos)
+* docker ps -a (lista todos container lidados e desligados)
+* docker rm ID_or_NAME_Container (remove o container apartir do ID/name do container)
+* docker stop ID_or_NAME_Container (Desativa o container apartir do ID/Name)
+* docker start ID_or_NAME_Container (Ativa o container apartir do ID/Name)
+
+
+
+## Docker-Composer - Comandos
+
+* docker-compose up (Cria e inicializa o container)
+
+* docker-compose up -d (Cria e inicializa o container em background)
 
