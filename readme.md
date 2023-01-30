@@ -18,6 +18,8 @@
 * yarn add csv-parse
 * yarn add swagger-ui-express
 * yarn add @types/swagger-ui-express -D
+* yarn add typeorm reflect-metadata
+* yarn add pg
 
 
 ## Instalar VS Code ESLint extension
