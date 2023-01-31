@@ -19,4 +19,3 @@ export function createConnection(
   ): Promise<DataSource> {
     return AppDataSource.setOptions({ host }).initialize()
   }
-  
