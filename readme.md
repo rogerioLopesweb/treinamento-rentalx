@@ -44,3 +44,7 @@
 
 * docker-compose up -d (Cria e inicializa o container em background)
 
+## TypeORM 
+
+* yarn typeorm migration:create ./src/database/migrations/CreateSpecification Comando gera uma migração vazia passando a pasta e depos que gerar é preciso definia estrutura da tabela nome e campos.
+* yarn migration:run para executar a migração criada, observação no script em packge.json tem quete esta configuração "migration:run": "ts-node-dev ./node_modules/typeorm/cli.js migration:run -d src/database/data-source.ts"

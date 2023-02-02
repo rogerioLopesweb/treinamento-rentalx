@@ -3,7 +3,7 @@ import "reflect-metadata";//TypeORM dependencia
 import { DataSource } from "typeorm";
 
 
-export const appDataSource = new DataSource({
+export const AppDataSource = new DataSource({
     type: "postgres",
     host: process.env.DB_HOST,
     port: parseInt(process.env.DB_PORT),
@@ -14,6 +14,8 @@ export const appDataSource = new DataSource({
     migrations: ["./src/database/migrations/*.ts"],
 });
 
-
-appDataSource.initialize();
-
+export function createConnection(
+    host = process.env.NODE_ENV === "test" ? "localhost" : "database"
+  ): Promise<DataSource> {
+    return AppDataSource.setOptions({ host }).initialize()
+  }
