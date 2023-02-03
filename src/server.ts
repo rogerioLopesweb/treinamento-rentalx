@@ -1,9 +1,11 @@
+import "reflect-metadata";//TypeORM / tsyringe// dependencia 
 import express from 'express';
 import swaggerUi from 'swagger-ui-express';
 
 import swaggerFile from './swagger.json';
 import { router } from './routes';
 
+import "./shared/container";
 import  { createConnection  } from "./database/data-source";
 
 createConnection();

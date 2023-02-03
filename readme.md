@@ -20,6 +20,7 @@
 * yarn add @types/swagger-ui-express -D
 * yarn add typeorm reflect-metadata
 * yarn add pg
+* yarn add tsyringe
 
 
 ## Instalar VS Code ESLint extension

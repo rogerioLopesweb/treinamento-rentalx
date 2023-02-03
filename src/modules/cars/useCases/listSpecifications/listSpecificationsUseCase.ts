@@ -1,8 +1,12 @@
 import { Specification } from '../../entities/Specification';
 import { ISpecificationsRepository } from '../../repositories/ISpecificationsRepository';
+import { inject, injectable } from 'tsyringe';
 
+@injectable()
 class ListSpecificationsUseCase {
-    constructor(private specificationsRepository : ISpecificationsRepository){}
+    constructor(
+        @inject("SpecificationsRepository")
+        private specificationsRepository : ISpecificationsRepository){}
 
    async execute(): Promise<Specification[]>
     {

@@ -1,5 +1,4 @@
 import 'dotenv/config'
-import "reflect-metadata";//TypeORM dependencia 
 import { DataSource } from "typeorm";
 
 
