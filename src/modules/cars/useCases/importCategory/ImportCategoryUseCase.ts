@@ -13,12 +13,11 @@ interface IImportCategory {
 class ImportCategoryUseCase {
    
    constructor(
-    @inject(CategoriesRepository)
+    @inject("CategoriesRepository")
     private categoriesRespository: ICategoriesRepository) {}
    
    loadCategories(file: Express.Multer.File ) : Promise<IImportCategory[]> {
         return new Promise((resolve, reject) => {
-
             const stream = fs.createReadStream(file.path);
             const categories: IImportCategory[] = [];
 
@@ -42,10 +41,11 @@ class ImportCategoryUseCase {
 
     async execute(file: Express.Multer.File ): Promise<void> {
        const categories =  await this.loadCategories(file);
-       //console.log(categories);
+       console.log("Conteudo do CSV");
+       console.log(categories);
        categories.map( async (category) => {
             const { name, description } = category;
-            const existCategory =  this.categoriesRespository.findByName(name);
+            const existCategory = await this.categoriesRespository.findByName(name);
             if(!existCategory){
               this.categoriesRespository.create({
                 name,
