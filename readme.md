@@ -21,6 +21,8 @@
 * yarn add typeorm reflect-metadata
 * yarn add pg
 * yarn add tsyringe
+* yarn add bcryptjs
+* yarn add @types/bcryptjs -D
 
 
 ## Instalar VS Code ESLint extension
