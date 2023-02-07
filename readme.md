@@ -23,6 +23,8 @@
 * yarn add tsyringe
 * yarn add bcryptjs
 * yarn add @types/bcryptjs -D
+* yarn add jsonwebtoken
+* yarn add @types/jsonwebtoken
 
 
 ## Instalar VS Code ESLint extension

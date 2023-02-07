@@ -10,7 +10,11 @@ class UsersRepository implements IUsersRepository {
     constructor() {
       this.repository = AppDataSource.getRepository(User);
     }
-   async create(data: ICreateUserDTO): Promise<void> {
+    async findByEmail(email: string): Promise<User> {
+        const user = await this.repository.findOne({ where: { email } });
+        return user;
+    }
+    async create(data: ICreateUserDTO): Promise<void> {
         const user = this.repository.create({
             name : data.name,
             email: data.email,
