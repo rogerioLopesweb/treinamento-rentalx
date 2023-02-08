@@ -1,5 +1,7 @@
 import { verify } from "jsonwebtoken";
 import { Request,Response, NextFunction } from "express";
+import 'dotenv/config'
+
 import { UsersRepository } from "../modules/accounts/repositories/implementations/UsersRepository";
 import { AppError } from "../errors/AppError";
 
@@ -17,7 +19,7 @@ async function ensureAuthenticated(request :Request, response: Response, next: N
     const [bearer, token] = authHeader.split(" ");
     
    try {
-       const { sub: user_id } = verify(token, "ef0fd34af5eecb4319d40158db5b92b8") as IPayload;
+       const { sub: user_id } = verify(token, process.env.APP_TOKEN) as IPayload;
        console.log( user_id );
        
        const usersRepository = new UsersRepository();
