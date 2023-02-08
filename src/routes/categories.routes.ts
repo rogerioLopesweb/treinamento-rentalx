@@ -5,8 +5,10 @@ import multer from "multer";
 import { CreateCategoryController } from "../modules/cars/useCases/createCategory/CreateCategoryController";
 import { ListCategoriesController}  from '../modules/cars/useCases/listCategories/ListCategoriesController';
 import { ImportCategoryController }  from '../modules/cars/useCases/importCategory/importCategoryController';
+import { ensureAuthenticated } from "../middlewares/ensureAuthenticated";
 
 const categoriesRoutes =  Router();
+categoriesRoutes.use(ensureAuthenticated);
 
 //Configurando a pasta que será realizado o uploado do arquivo
 const upload = multer({
