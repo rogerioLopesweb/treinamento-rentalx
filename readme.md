@@ -25,7 +25,7 @@
 * yarn add @types/bcryptjs -D
 * yarn add jsonwebtoken
 * yarn add @types/jsonwebtoken
-
+* yarn add express-async-errors
 
 ## Instalar VS Code ESLint extension
 * https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
