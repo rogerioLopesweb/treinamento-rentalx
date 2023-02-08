@@ -27,6 +27,10 @@ async function ensureAuthenticated(request :Request, response: Response, next: N
        if(!user){
         throw new AppError("User does not exist!", 401);
        }
+       //customizacao de types express pasta @types
+       request.user = {
+         id: user_id,
+       }
     
     next();
    } catch  {
