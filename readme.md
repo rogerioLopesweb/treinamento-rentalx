@@ -26,6 +26,9 @@
 * yarn add jsonwebtoken
 * yarn add @types/jsonwebtoken
 * yarn add express-async-errors
+* yarn add jest @types/jest -D
+* yarn jest --init
+* yarn add  ts-jest -D
 
 ## Instalar VS Code ESLint extension
 * https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
