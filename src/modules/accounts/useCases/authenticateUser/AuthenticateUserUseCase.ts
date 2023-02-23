@@ -1,5 +1,5 @@
 import { compare } from "bcryptjs";
-import { AppError } from "errors/AppError";
+import { AppError } from "@errors/AppError";
 import { sign } from "jsonwebtoken";
 import { inject, injectable } from "tsyringe";
 
