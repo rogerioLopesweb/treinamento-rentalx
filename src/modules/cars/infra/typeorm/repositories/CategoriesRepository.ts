@@ -1,7 +1,7 @@
-import { Category } from "@modules/cars/entities/Category";
-import { ICategoriesRepository, ICreateCategoryDTO } from  "../ICategoriesRepository";
 import { Repository } from "typeorm";
-import { AppDataSource } from "@database/data-source";
+import { AppDataSource } from "@shared/infra/typeorm/data-source";
+import { ICategoriesRepository, ICreateCategoryDTO } from "@modules/cars/repositories/ICategoriesRepository";
+import { Category } from "../entities/Category";
 
 
 class CategoriesRepository implements ICategoriesRepository{

@@ -1,7 +1,7 @@
-import { Specification } from "../../entities/Specification";
-import { ISpecificationsRepository, ICreateSpecificationDTO } from  "../ISpecificationsRepository";
+import { AppDataSource } from "@shared/infra/typeorm/data-source";
+import { ICreateSpecificationDTO, ISpecificationsRepository } from "@modules/cars/repositories/ISpecificationsRepository";
 import { Repository, In } from "typeorm";
-import { AppDataSource } from "../../../../database/data-source";
+import { Specification } from "../entities/Specification";
 
 
 
