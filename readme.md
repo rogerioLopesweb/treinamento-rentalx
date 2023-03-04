@@ -57,17 +57,21 @@
 * yarn typeorm migration:create ./src/shared/infra/typeorm/migrations/CreateSpecification Comando gera uma migração vazia passando a pasta e depos que gerar é preciso definia estrutura da tabela nome e campos.
 * yarn migration:run para executar a migração criada, observação no script em packge.json tem quete esta configuração "migration:run": "ts-node-dev ./node_modules/typeorm/cli.js migration:run -d src/shared/infra/typeorm/data-source.ts"
 
+<br /><br /><br />
 
 # Cadastro de carro
 
 **RF** => Requisitos funcionais<br />
+
     * Deve ser possível cadastrar um novo carro.
     
 
 **RNF** => Requisitos não funcionais<br />
+
    * Nada definido
 
 **RN** => Regra de negócio<br />
+
     * Não deve ser possível cadastrar um carro com uma placa já existente.
     * Não deve ser possível alterar a placa de um carro já cadastrado.
     * carro deve ser castrado com disponibilidade por padrão.
@@ -76,28 +80,34 @@
 # Listagem de carros
 
 **RF** => Requisitos funcionais<br />
+
     * Deve ser possível listar todos os carros disponíveis
     * Deve ser possível listar todos os carros disponíveis pelo nome da categoria
     * Deve ser possível listar todos os carros disponíveis pelo nome da marcar
     * Deve ser possível listar todos os carros disponíveis pelo nome do carro
 
 **RNF** => Requisitos não funcionais<br />
+
    * Nada definido
 
 **RN** => Regra de negócio<br />
+
  * O usuãrio não precisa estar logado no sistema
 
 # Cadastro de Especificação no carro
 
 **RF** => Requisitos funcionais<br />
+
     * Deve ser possível cadastrar uma especificação para um carro
     * Deve ser possível listar todas as especificações
     * Deve ser possível listar todos os carros
 
 **RNF** => Requisitos não funcionais<br />
+
    * Nada definido
 
 **RN** => Regra de negócio<br />
+
   * Não deve ser possível cadastrar sem um carro cadastrado.
   * Não deve ser possível cadastrar uma especificação já existente para o mesmo carro.
   * O usuário responsável pelo cadastro deve ser  um usuários administrador.
@@ -105,25 +115,30 @@
 # Cadastro de imagens
 
 **RF** => Requisitos funcionais<br />
+
     * Deve ser possível cadastrar a imagem doc Carro
     * Deve ser possível listar todos os carros
 
 **RNF** => Requisitos não funcionais<br />
+
    * Utilizar o multer para upload dos arquivos
 
-**RN** => Regra de negócio
+**RN** => Regra de negócio<br />
+
     * O usuário deve poder cadastrar mais de uma imagem para o mesmo carro.
     * O usuário responsável pelo cadastro deve ser  um usuários administrador.
 
 # Aluguel de carro
 
 **RF** => Requisitos funcionais<br />
+
 * Deve ser possível cadastrar um aluguel 
 
 **RNF** => Requisitos não funcionais<br />
    * Nada definido
 
 **RN** => Regra de negócio<br />
+
   * O aluguel deve ter duração mínima de 24 horas. 
   * Não deve ser possível cadastrar um novo aluguel, caso já exista um aberto para o mesmo carro.
   
